@@ -1,1 +1,2 @@
-== YouTube uploader for a rails project. practice. push buttons, rinse, repeat. 
+== YouTube uploader
+  rails project. practice. push buttons, rinse, repeat. 
