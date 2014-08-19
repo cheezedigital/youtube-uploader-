@@ -1,0 +1,12 @@
+<%= form_tag '', id: 'video_pre_upload' do %>
+  <div class="form-group">
+    <%= text_field_tag :title, pre_upload_info[:title], required: true, placeholder: 'Title', class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= text_area_tag :description, pre_upload_info[:description], required: true, placeholder: 'Description', class: 'form-control' %>
+  </div>
+<% end %>
+
+  <div class="">
+
+  </div>
