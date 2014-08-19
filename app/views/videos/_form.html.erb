@@ -7,6 +7,14 @@
   </div>
 <% end %>
 
-  <div class="">
+  <%= form_tag '', id: 'video_upload', multipart: true do %>
+    <%= hidden_field_tag :token, '' %>
 
+  <div class="form-group">
+    <%= file_field_tag :file, required: true %>
   </div>
+  <% end %>
+
+  <button id="submit_pre_upload_form" class="btn btn-lg btn-primary">Upload</button>
+  <%= image_tag 'ajax-loader.gif', class: 'pre-loader', alt: 'Uploading...', title: 'Uploading...' %>
+  
