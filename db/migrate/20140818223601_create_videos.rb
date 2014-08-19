@@ -4,7 +4,7 @@ class CreateVideos < ActiveRecord::Migration
       t.string :uid
       t.string :title
       t.text :description
-      t.reference :user
+      t.references :user
 
       t.timestamps
     end
