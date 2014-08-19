@@ -19,8 +19,19 @@ class VideosController < ApplicationController
     end
   end
 
-  def index
+  def get_video_uid
+    video_uid = params[:id]
+    v = current_user.videos.build(uid: video_uid)
+    youtube = YouTubeIt::OAuth2Client.new(dev_key: ENV[:GOOGLE_DEV_KEY])
+    yt_video = yt_video.title
+    v.description = yt_video.description
+    v.save
+    flash[:success] = "thanks for sharing, dawg!"
+    redirect_to root_url
+  end
 
+  def index
+    @videos = Video.all
   end
 
 end
